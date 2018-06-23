@@ -6,13 +6,13 @@ exports.writeExtracted = function () {
     const { document, selection } = editor;
 
     const selectionLine = selection.end.line;
-    const lastLine = document.lineAt(selectionLine);
-
     const interfaceString = document.getText(selection)
     const promise = extractInterface(interfaceString)
+
     const edit = new vscode.WorkspaceEdit();
-    promise.then(extraced => {
-        edit.insert(document.uri, lastLine.range.end, extraced);
+    const lastLine = document.lineAt(selectionLine);
+    promise.then(extracted => {
+        edit.insert(document.uri, lastLine.range.end, extracted);
         return vscode.workspace.applyEdit(edit)
     })
 }
