@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true, /* Typecheck .js files. */
+        "lib": [
+            "esnext"
+        ],
+        "module": "commonjs",
+        "noEmit": true,
+        "target": "esnext"
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

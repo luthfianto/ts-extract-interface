@@ -1,4 +1,4 @@
-const { extractInterface } = require("./extract-interface")
+const { extractInterface } = require("../src/extract-interface")
 
 async function print() {
     const expected = `

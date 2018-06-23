@@ -1,4 +1,4 @@
-const { extractInterface } = require("./extract-interface")
+const { extractInterface } = require("./src/extract-interface")
 
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
