@@ -2,7 +2,7 @@
     "name": "ts-extract-interface",
     "displayName": "ts-extract-interface",
     "description": "Extract an interface from a TypeScript class",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "rilut",
     "repository": {
         "type": "git",
