@@ -1,4 +1,3 @@
-
 const typescriptParser = require("typescript-parser");
 const parser = new typescriptParser.TypescriptParser();
 
@@ -28,7 +27,7 @@ async function extractInterface(sourceString) {
     const res = `
 export interface I${className} {
     ${pretty.join(";\n    ")};
-}`.trim();
+}`
 
     return res;
 }
