@@ -1,0 +1,52 @@
+{
+    "name": "ts-extract-interface",
+    "displayName": "ts-extract-interface",
+    "description": "Extract an interface from a TypeScript class",
+    "version": "0.0.4",
+    "publisher": "rilut",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rilut/ts-extract-interface.git"
+    },
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.writeExtracted"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.writeExtracted",
+                "title": "Extract an interface from a TypeScript class"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "when": "resourceLangId == typescript",
+                    "command": "extension.writeExtracted",
+                    "group": "1_modification"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "typescript-parser": "*"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
